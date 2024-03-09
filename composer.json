@@ -4,10 +4,5 @@
         "psr-4": {
             "Lenkowski\\Cert\\": "src/"
         }
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
     }
 }
