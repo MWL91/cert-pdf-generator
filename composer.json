@@ -1,0 +1,17 @@
+{
+    "name": "mwl91/cert",
+    "autoload": {
+        "psr-4": {
+            "Lenkowski\\Cert\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "mpdf/mpdf": "^8.2",
+        "ramsey/uuid": "^4.7"
+    }
+}
