@@ -40,4 +40,9 @@ final class Certificate
     {
         return $this->issued_at->format('Y-m-d');
     }
+
+    public function getIssuer(): string
+    {
+        return self::ISSUER;
+    }
 }

@@ -13,7 +13,7 @@ $cert = new Certificate(
 
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->SetAuthor($cert::ISSUER);
+$mpdf->SetAuthor($cert->getIssuer());
 
 // Specify a PDF template
 $pagecount = $mpdf->setSourceFile('cert.pdf');
