@@ -11,7 +11,6 @@
         }
     },
     "require": {
-        "mpdf/mpdf": "^8.2",
-        "ramsey/uuid": "^4.7"
+        "mpdf/mpdf": "^8.2"
     }
 }
