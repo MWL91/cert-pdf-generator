@@ -13,5 +13,8 @@
     "require": {
         "mpdf/mpdf": "^8.2",
         "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34"
     }
 }
