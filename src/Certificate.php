@@ -15,6 +15,15 @@ final class Certificate
         private string $template
     )
     {
+        if($name === '' || $template === '') {
+            throw new \InvalidArgumentException('Name cannot be empty');
+        }
+
+        if($issued_at > new \DateTimeImmutable()) {
+            throw new \OutOfRangeException('Certificate cannot be issued in the future');
+        }
+
+        $this->name = strip_tags($name);
     }
 
     public function getName(): string
