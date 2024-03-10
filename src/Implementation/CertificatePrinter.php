@@ -7,16 +7,16 @@ use Lenkowski\Cert\Certificate;
 
 class CertificatePrinter implements \Lenkowski\Cert\Abstract\CertificatePrinter
 {
-    public function __construct(private PdfPrinter $mpdf)
+    public function __construct(readonly private PdfPrinter $pdf)
     {
     }
 
     public function printCertificate(Certificate $cert): void
     {
-        $this->mpdf->setAuthor($cert->getIssuer());
-        $this->mpdf->setSourcePdf($cert->getTemplate());
-        $this->mpdf->writeHtml($this->getContent($cert));
-        $this->mpdf->print($cert->getFilename());
+        $this->pdf->setAuthor($cert->getIssuer());
+        $this->pdf->setSourcePdf($cert->getTemplate());
+        $this->pdf->writeHtml($this->getContent($cert));
+        $this->pdf->print($cert->getFilename());
     }
 
     private function getContent(Certificate $cert): string

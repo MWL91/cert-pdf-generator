@@ -15,6 +15,7 @@
         "ramsey/uuid": "^4.7"
     },
     "require-dev": {
-        "pestphp/pest": "^2.34"
+        "pestphp/pest": "^2.34",
+        "mockery/mockery": "^1.6"
     }
 }
