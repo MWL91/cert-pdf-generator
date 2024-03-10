@@ -1,7 +1,7 @@
 <?php
 
 use Lenkowski\Cert\Certificate;
-use Lenkowski\Cert\Implementation\MpdfCertificatePrinter;
+use Lenkowski\Cert\Implementation\CertificatePrinter;
 use Lenkowski\Cert\Implementation\Printers\MpdfPrinterAdapter;
 use Mpdf\Mpdf;
 use Ramsey\Uuid\Uuid;
@@ -15,7 +15,7 @@ $cert = new Certificate(
     __DIR__ . '/cert.pdf'
 );
 
-$printer = new MpdfCertificatePrinter(
+$printer = new CertificatePrinter(
     new MpdfPrinterAdapter(new Mpdf)
 );
 $printer->printCertificate($cert);

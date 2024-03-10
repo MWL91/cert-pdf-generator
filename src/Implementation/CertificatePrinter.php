@@ -2,12 +2,10 @@
 
 namespace Lenkowski\Cert\Implementation;
 
-use Lenkowski\Cert\Abstract\CertificatePrinter;
 use Lenkowski\Cert\Abstract\PdfPrinter;
 use Lenkowski\Cert\Certificate;
-use Mpdf\Mpdf;
 
-class MpdfCertificatePrinter implements CertificatePrinter
+class CertificatePrinter implements \Lenkowski\Cert\Abstract\CertificatePrinter
 {
     public function __construct(private PdfPrinter $mpdf)
     {
