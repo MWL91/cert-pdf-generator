@@ -11,7 +11,8 @@ final class Certificate
     public function __construct(
         private string $name,
         private UuidInterface $number,
-        private \DateTimeInterface $issued_at
+        private \DateTimeInterface $issued_at,
+        private string $template
     )
     {
     }
@@ -44,5 +45,15 @@ final class Certificate
     public function getIssuer(): string
     {
         return self::ISSUER;
+    }
+
+    public function getTemplate(): string
+    {
+        return $this->template;
+    }
+
+    public function getFilename(): string
+    {
+        return $this->getName() . '.pdf';
     }
 }
